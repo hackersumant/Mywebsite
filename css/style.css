@@ -875,7 +875,7 @@ img {
   margin-right: 1.5rem;
 }
 .nav__link.conta{
-  background: rgba(255, 60, 0, 0.879) !important;
+  background: rgba(255, 60, 0) !important;
 }
 /*===== HEADER =====*/
 .header {
@@ -884,7 +884,7 @@ img {
   position: fixed;
   top: 0;
   left: 0;
-  font-family: Quicksand;
+  font-weight: 400;
   padding: 0 1.5rem;
   background-color: rgb(0, 24, 53);
   z-index: var(--z-fixed);
@@ -913,6 +913,9 @@ img {
 
 /*===== NAV =====*/
 @media screen and (max-width: 768px) {
+  .nav__link.conta{
+    background:none !important;
+  }
   .nav {
     position: fixed;
     top: 0;
