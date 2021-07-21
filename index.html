@@ -61,9 +61,7 @@
                     <div>
                         <a href="#"
                             class="nav__name">Hacker-Sumant</a>
-                        <span
-                            class="nav__profesion">Web
-                            developer</span>
+
                     </div>
                 </div>
 
@@ -96,7 +94,7 @@
                 <div class="nav__social">
                     <a href="https://hacker-programmer.blogspot.com/"
                         class="nav__social-icon"><img
-                            src="https://th.bing.com/th/id/R.505065d0d76c7b6d4b1f7689478f1a16?rik=bQjo1CNCMl%2fzoQ&riu=http%3a%2f%2ficons.iconarchive.com%2ficons%2figh0zt%2fios7-style-metro-ui%2f512%2fMetroUI-Google-Blogger-icon.png&ehk=qypb7TFX5zaTA4%2brI%2b1UTwcu045gGlsLaf53I4r9L08%3d&risl=&pid=ImgRaw"
+                            src="./images/Blogger_Shiny_Icon.svg.png"
                             alt=""></a>
                     <a target="_blank"
                         href="https://github.com/hackersumant"
@@ -104,6 +102,9 @@
                         <ion-icon
                             name="logo-github">
                         </ion-icon>
+                    </a>
+                    <a class="nav__social-icon moon" id="hid1" data-mode="light" onclick="changeMode(this)">
+                        <i class="fas fa-moon" title="Change theme"></i>
                     </a>
                 </div>
             </div>
@@ -116,11 +117,6 @@
 
     <!-- home section start -->
     <section class="home" id="home">
-        <video autoplay loop muted class="video"
-            plays-inline>
-            <source src="./Videos/video_1280x720.mp4"
-                type="video/mp4">
-        </video>
         <div class="max-width">
             <div class="home-content">
                 <div class="img-1"><img
@@ -136,10 +132,10 @@
     </section>
 
     <!-- about section start -->
-    <section class="about" id="about">
+    <section class="about reveal" id="about">
         <div class="max-width">
             <h2 class="title">About Me</h2>
-            <div class="about-content">
+            <div class="about-content reveal">
                 <div class="column left">
                     <img src="images/PSX_20201207_214842.jpg"
                         alt="">
@@ -173,10 +169,10 @@
     </section>
     <!-- skills section start -->
     <!-- skill section start -->
-    <section class="skill" id="skill">
+    <section class="skill reveal" id="skill">
         <div class="max-width">
             <h2 class="title">My Skills</h2>
-            <div class="skill-content">
+            <div class="skill-content reveal">
                 <div class="wrapper">
                     <div class="card">
                         <div class="circle">
@@ -186,8 +182,8 @@
                                 <span></span>
                             </div>
                         </div>
-                        <div class="text">HTML &
-                            CSS</div>
+                        <div class="text">HTML
+                        </div>
                     </div>
                     <div class="card js">
                         <div class="circle">
@@ -198,7 +194,7 @@
                             </div>
                         </div>
                         <div class="text">
-                            JavaScript</div>
+                            CSS</div>
                     </div>
                     <div class="card react">
                         <div class="circle">
@@ -208,7 +204,8 @@
                                 <span></span>
                             </div>
                         </div>
-                        <div class="text">React JS
+                        <div class="text">
+                            JavaScript
                         </div>
                     </div>
                 </div>
@@ -217,10 +214,10 @@
         </div>
     </section>
     <!-- services section start -->
-    <section class="contact" id="contact">
+    <section class="contact " id="contact">
         <div class="max-width">
             <h2 class="title">Contact</h2>
-            <div class="contact-content">
+            <div class="contact-content ">
                 <div class="container">
                     <div class="contact_Info">
                         <div>
@@ -261,7 +258,7 @@
                             </li>
                             <li><a href="https://hacker-programmer.blogspot.com/"
                                     target="_blank"><img
-                                        src="https://th.bing.com/th/id/R.505065d0d76c7b6d4b1f7689478f1a16?rik=bQjo1CNCMl%2fzoQ&riu=http%3a%2f%2ficons.iconarchive.com%2ficons%2figh0zt%2fios7-style-metro-ui%2f512%2fMetroUI-Google-Blogger-icon.png&ehk=qypb7TFX5zaTA4%2brI%2b1UTwcu045gGlsLaf53I4r9L08%3d&risl=&pid=ImgRaw"
+                                        src="./images/Blogger_Shiny_Icon.svg.png"
                                         alt=""></a>
                             </li>
                         </ul>
@@ -334,8 +331,9 @@
     </footer>
     <script src="./js/main.js"></script>
 
- <!-- ===== IONICONS ===== -->
- <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <!-- ===== IONICONS ===== -->
+    <script
+        src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
 </body>
 
 </html>
