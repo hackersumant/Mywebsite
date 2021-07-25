@@ -38,7 +38,32 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(1, 213, 181);
 }
-
+.about,
+.skill,
+.contact {
+  font-family: "Poppins", sans-serif;
+  background: var(--mainbackgrund) !important;
+  background-size: 48px 48px !important;
+  background-image: radial-gradient(
+      transparent 20px,
+      var(--lightbg) 20px,
+      var(--lightbg) 24px,
+      transparent 24px
+    ),
+    radial-gradient(
+      transparent 20px,
+      var(--lightbg) 20px,
+      var(--lightbg) 24px,
+      transparent 24px
+    ) !important;
+  background-position: 0 0, 24px 24px !important;
+  animation: bganim 2s linear infinite !important;
+}
+@keyframes bganim {
+  100% {
+    background-position: 0 0, 0 0 !important;
+  }
+}
 section .title {
   position: relative;
   text-align: center;
@@ -93,8 +118,8 @@ section .title::after {
 }
 .scroll-up-btn {
   position: fixed;
-  height: 45px;
-  width: 42px;
+  height: 41px;
+  width: 37px;
   background: crimson;
   right: 30px;
   bottom: 10px;
@@ -102,7 +127,7 @@ section .title::after {
   line-height: 45px;
   color: #fff;
   z-index: 9999;
-  font-size: 30px;
+  font-size: 20px;
   border-radius: 6px;
   border-bottom-width: 2px;
   cursor: pointer;
@@ -131,16 +156,6 @@ section .title::after {
   min-height: 550px;
   font-family: "Ubuntu", sans-serif;
 }
-.home .video {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -99999999999;
-}
 .home .home-content .img-1 {
   z-index: -1;
 }
@@ -151,7 +166,7 @@ section .title::after {
   margin-left: 150px;
   margin-bottom: -70px;
   border: 6px solid orange;
-  -webkit-box-reflect: below 1px
+  -webkit-box-reflect: below 0px
     linear-gradient(transparent, rgba(0, 0, 0, 0.1));
   animation: animate 0.9s linear infinite;
 }
@@ -208,13 +223,7 @@ section .title::after {
 section {
   padding: 100px 0;
 }
-/* about section styling */
-.about {
-  font-family: "Poppins", sans-serif;
-  background: var(--mainbackgrund) !important;
-  background-position-x: right;
-  background-repeat: no-repeat;
-}
+
 .about .title::after {
   content: "who i am";
 }
@@ -226,11 +235,12 @@ section {
   height: 400px;
   width: 400px;
   object-fit: cover;
-  border: 10px solid rgba(0, 0, 0, 0.1);
+  border: 12px solid transparent;
   border-radius: 50%;
   -moz-box-shadow: var(--moz-box-shadow);
   -webkit-box-shadow: var(--webkit-box-shadow);
   box-shadow: var(--box-shadow);
+  box-shadow: 0 0 0 4px var(--whghty);
 }
 .about .about-content {
   display: flex;
@@ -269,14 +279,10 @@ section {
 }
 /* contact form style */
 .contact {
-  z-index: -99999999;
-  background: var(--mainbackgrund) !important;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  min-height: 100vh !important;
   font-family: "poppins";
 }
 .contact .title::after {
@@ -505,8 +511,6 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--mainbackgrund) !important;
-  background-blend-mode: multiply;
   background-size: cover;
 }
 .skill-content {
@@ -1106,7 +1110,31 @@ img {
 }
 
 /* mode */
-:root {
+:root {  --aboutcolor: rgb(216, 216, 216);
+  --sectiontext: #fff;
+  --mainbackgrund: #212529;
+  --colorpara: grey;
+  --skillbackground: #212529;
+  --moz-box-shadow: inset -8px -8px 8px 0 rgba(174, 174, 192, 0.25),
+    inset 8px 8px 8px 0 #000, -8px -8px 24px 0 #000,
+    8px 8px 24px 0 rgba(174, 174, 192, 0.4);
+  --webkit-box-shadow: inset -8px -8px 8px 0 rgba(174, 174, 192, 0.25),
+    inset 8px 8px 8px 0 #000, -8px -8px 24px 0 #000,
+    8px 8px 24px 0 rgba(174, 174, 192, 0.4);
+  --box-shadow: inset -8px -8px 8px 0 rgba(174, 174, 192, 0.25),
+    inset 8px 8px 8px 0 #000, -8px -8px 24px 0 #000,
+    8px 8px 24px 0 rgba(174, 174, 192, 0.4);
+  --contactinfobg: #0d172d;
+  --whghty: #fff;
+  --filter: invert(1);
+  --bx: inset 0 0 50px #000;
+  --lightbg: #252b30;
+
+ 
+}
+[data-theme="dark"] {
+
+
   --mainbackgrund: #f1f1f1;
   --sectiontext: #000;
   --aboutcolor: rgb(0, 0, 0);
@@ -1125,24 +1153,5 @@ img {
   --whghty: #000;
   --filter: invert(0);
   --bx: 0;
-}
-[data-theme="dark"] {
-  --aboutcolor: rgb(216, 216, 216);
-  --sectiontext: #fff;
-  --mainbackgrund: #212529;
-  --colorpara: grey;
-  --skillbackground: #212529;
-  --moz-box-shadow: inset -8px -8px 8px 0 rgba(174, 174, 192, 0.25),
-    inset 8px 8px 8px 0 #000, -8px -8px 24px 0 #000,
-    8px 8px 24px 0 rgba(174, 174, 192, 0.4);
-  --webkit-box-shadow: inset -8px -8px 8px 0 rgba(174, 174, 192, 0.25),
-    inset 8px 8px 8px 0 #000, -8px -8px 24px 0 #000,
-    8px 8px 24px 0 rgba(174, 174, 192, 0.4);
-  --box-shadow: inset -8px -8px 8px 0 rgba(174, 174, 192, 0.25),
-    inset 8px 8px 8px 0 #000, -8px -8px 24px 0 #000,
-    8px 8px 24px 0 rgba(174, 174, 192, 0.4);
-  --contactinfobg: #0d172d;
-  --whghty: #fff;
-  --filter: invert(1);
-  --bx: inset 0 0 50px #000;
+  --lightbg: #e3e3e3;
 }
